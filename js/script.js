@@ -13,9 +13,12 @@ function createRandomChoice() {
 }
 
 function startGame() {
-    alert("Game started!");
+    startButton.style.opacity = "0.5";
     startButton.disabled = true;
+
+    resetButton.style.opacity = "1";
     resetButton.disabled = false;
+
     let choice = createRandomChoice();
     currentlyPlaying = true;
 
@@ -25,6 +28,8 @@ function startGame() {
             currentlyPlaying = false;
             return -1;
         }
+
+        rockButton.style.opacity = "0.5";
 
         if (choice === "rock") {
             alert("Tie!");
@@ -48,6 +53,8 @@ function startGame() {
             return -1;
         }
 
+        paperButton.style.opacity = "0.5";
+
         if (choice === "rock") {
             alert("You win!");
         }
@@ -70,6 +77,8 @@ function startGame() {
             return -1;
         }
 
+        scissorsButton.style.opacity = "0.5";
+
         if (choice === "rock") {
             alert("You lose.");
         }
@@ -89,11 +98,19 @@ function startGame() {
 
 function reset() {
     startButton.disabled = false;
+    startButton.style.opacity = "1";
+
     resetButton.disabled = true;
+    resetButton.style.opacity = "0.5";
+
+    rockButton.style.opacity = "1";
+    paperButton.style.opacity = "1";
+    scissorsButton.style.opacity = "1";
 
     currentlyPlaying = false;
 }
 
 startButton.addEventListener("click", startGame);
+resetButton.style.opacity = "0.5";
 resetButton.disabled = true;
 resetButton.addEventListener("click", reset);

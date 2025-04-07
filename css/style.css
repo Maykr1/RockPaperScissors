@@ -15,20 +15,20 @@ h1 {
 
 img {
   margin: 25px;
+  transition: filter 0.5s ease;
 }
 img:hover {
   opacity: 0.5;
-  transition: filter 0.5s ease;
 }
 
 button {
   background-color: #0A0A23;
   color: #FFFFFF;
   font-size: 24px;
+  transition: filter 0.5s ease;
 }
 button:hover {
   opacity: 0.5;
-  transition: filter 0.5s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
