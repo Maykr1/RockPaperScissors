@@ -103,9 +103,9 @@ function reset() {
     resetButton.disabled = true;
     resetButton.style.opacity = "0.5";
 
-    rockButton.style.opacity = "1";
-    paperButton.style.opacity = "1";
-    scissorsButton.style.opacity = "1";
+    rockButton.style.opacity = "";
+    paperButton.style.opacity = "";
+    scissorsButton.style.opacity = "";
 
     currentlyPlaying = false;
 }
